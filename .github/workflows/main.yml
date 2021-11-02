@@ -19,6 +19,8 @@ jobs:
 
       - name: Build static file
         run: npm run build
+        env:
+          REACT_APP_MY_SECRET: ${{ secrets.DISPLAY_VALUE }}
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
